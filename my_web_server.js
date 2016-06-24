@@ -1,7 +1,6 @@
-var http = require('http');
+var express = require('express');
 
-http.createServer(function(req, res) {
-	res.writeHead(200, {'Content-Type': 'text/plain'});
-	res.end('Hello Node.js world');
-}).listen(8080);
+app = express();
+app.use(express.static('/data/data/com.termux/files/home/ali/public'));
+app.listen(8080);
 console.log('server running on port 8080');
